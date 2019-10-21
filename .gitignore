@@ -1,1 +1,4 @@
-.vscode
+#Ignoring compiled binaries through G++
+a.out
+#Ignoring vim swap files
+*.swp
