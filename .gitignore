@@ -2,3 +2,4 @@
 a.out
 #Ignoring vim swap files
 *.swp
+.vscode/
