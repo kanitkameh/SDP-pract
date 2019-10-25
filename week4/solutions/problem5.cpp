@@ -6,7 +6,7 @@ using namespace std;
 class myQueue{
 	stack<int> s1;
 	stack<int> s2;
-	void transferStack(stack<int> source,stack<int> destination){
+	void transferStack(stack<int>& source,stack<int>& destination){
 		while(!source.empty()){
 			int current = source.top();
 			source.pop();
@@ -30,7 +30,7 @@ public:
 };
 int main(){
 	myQueue q;
-	int n,current;
+	int n, current;
 	cin >> n;
 	for(int i=0;i<n;i++){
 		cin >> current;
