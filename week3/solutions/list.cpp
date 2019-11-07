@@ -37,7 +37,7 @@ public:
         delete toDelete;
     }
   }
-  void addAt(int element, int position){
+  void insertAt(int element, int position){
     if(position==0){
       Node * toAdd = new Node();
       toAdd->data = element;
@@ -69,13 +69,5 @@ public:
 };
 
 int main() {
-  List l;
-  l.addAt(21,0);
-  l.addAt(42,1);
-  l.addAt(55,2);
-  l.addAt(66,3);
-  l.deleteAt(2);
-  cout << l.getElementAt(1) << endl;
-  cout << l.getElementAt(2) << endl;
   return 0;
 }
