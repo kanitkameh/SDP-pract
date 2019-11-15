@@ -24,10 +24,10 @@ class LList{
   public:
     friend class LListIterator<T>;
     LListIterator<T> begin() {
-      return LListIterator<T>(first);
+      //TODO
     }
     LListIterator<T> end() {
-      return LListIterator<T>(nullptr);
+      //TODO
     }
     
 
@@ -66,22 +66,24 @@ class LListIterator {
   private:
     friend class LList<T>;
 
-    LListIterator(typename LList<T>::Node *start) : current(start) {};
-    typename LList<T>::Node *current;
+    //variables ???
+    
+    LListIterator(/*???*/){
+
+    };
 
   public:
     T &operator*() {
-      return current->data;
+      //TODO
     }
     bool operator == (const LListIterator<T> &it) const {
-      return current == it.current;
+      //TODO
     }
     bool operator != (const LListIterator<T> &it) const {
-      return current != it.current;
+      //TODO
     }
     LListIterator<T> &operator++() {
-      current = current->next;
-      return *this;
+      //TODO
     };
 };
 
@@ -92,6 +94,10 @@ int main() {
   l.insertAt(2, 0);
   l.insertAt(3, 0);
   l.insertAt(4, 0);
+
+  for(auto it = l.begin(); it != l.end(); ++it){
+    std::cout << *it << std::endl;
+  }
 
   for(int x : l) {
     std::cout << x << std::endl;
