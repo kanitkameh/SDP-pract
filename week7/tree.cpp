@@ -27,6 +27,7 @@ class tree
   tree LeftTree()const;
   tree RightTree()const;
   void Create3(T, tree<T>, tree<T>);
+  void CreateTreeFromArr(node<T> * & pos, T array[], int size, int currentPos);
   void print() const
   {
     pr(root);
@@ -35,6 +36,9 @@ class tree
   void Create()
   {
     CreateTree(root);
+  }
+  void CreateWithArr(T array[], int size) {
+    CreateTreeFromArr(root, array, size, 0);
   }
   private:
   node<T> *root;
@@ -179,6 +183,20 @@ void tree<T>::CreateTree(node<T> * & pos)const
   cin >> c;
   if(c=='y')
     CreateTree(pos->Right);
+}
+
+template <class T>
+void tree<T>::CreateTreeFromArr(node<T> * & pos, T arr[], int size, int currentPos) {
+  pos = new node<T>;
+  pos->inf = arr[currentPos];
+  pos->Left = nullptr;
+  pos->Right = nullptr;
+  if(currentPos * 2 + 1 < size && arr[currentPos * 2 + 1] > 0) {
+    CreateTreeFromArr(pos->Left, arr, size, currentPos * 2 + 1);
+  }
+  if(currentPos * 2 + 2 < size && arr[currentPos * 2 + 2] > 0) {
+    CreateTreeFromArr(pos->Right, arr, size, currentPos * 2 + 2);
+  }
 }
 
 #endif // !TREE_H_INCLUDED
