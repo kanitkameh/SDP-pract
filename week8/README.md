@@ -15,10 +15,10 @@
 (true & (true v false))
 Желано дърво:
      &
-     / \
-true  v
-        / \
-  true false
+    / \
+true   v
+      / \
+  true   false
 ```
 Бонус:
 Направете програмата да оценява израза.
