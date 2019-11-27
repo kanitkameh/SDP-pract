@@ -11,8 +11,9 @@ struct node
   T inf;
   node *Left;
   node *Right;
+  node *Parent;
+  node():Left(NULL),Right(NULL),Parent(NULL){};
 };
-
 template <class T>
 class tree
 {
@@ -106,6 +107,12 @@ void tree<T>::Copy(node<T> * & pos, node<T>* const & r)const
     pos->inf = r->inf;
     Copy(pos->Left, r->Left);
     Copy(pos->Right, r->Right);
+    if(pos->Left!=NULL){
+      pos->Left->Parent=pos;
+    }
+    if(pos->Right!=NULL){
+      pos->Right->Parent=pos;
+    }
   }
 }
 
@@ -161,6 +168,12 @@ void tree<T>::Create3(T x, tree<T> l, tree<T> r)
   root->inf = x;
   Copy(root->Left, l.root);
   Copy(root->Right, r.root);
+  if(root->Left!=NULL){
+    root->Left->Parent=root;
+  }
+  if(root->Right!=NULL){
+    root->Right->Parent=root;
+  }
 }
 
 template <class T>
@@ -183,6 +196,12 @@ void tree<T>::CreateTree(node<T> * & pos)const
   cin >> c;
   if(c=='y')
     CreateTree(pos->Right);
+  if(pos->Left!=NULL){
+    pos->Left->Parent=pos;
+  }
+  if(pos->Right!=NULL){
+    pos->Right->Parent=pos;
+  }
 }
 
 template <class T>
@@ -196,6 +215,12 @@ void tree<T>::CreateTreeFromArr(node<T> * & pos, T arr[], int size, int currentP
   }
   if(currentPos * 2 + 2 < size && arr[currentPos * 2 + 2] > 0) {
     CreateTreeFromArr(pos->Right, arr, size, currentPos * 2 + 2);
+  }
+  if(pos->Left!=NULL){
+    pos->Left->Parent=pos;
+  }
+  if(pos->Right!=NULL){
+    pos->Right->Parent=pos;
   }
 }
 
