@@ -14,25 +14,25 @@ struct Node {
   }
 };
 
+void printTree(int tr[], int n, int currPos) {
+  if(currPos >= n || tr[currPos] == -1) {
+    return;
+  }
 
-// void printTreeArray(int tree[], int n, int current) {
-//   if (current >= n) {
-//     return;
-//   }
-//   cout << tree[current] << " ";
-//   printTreeArray(tree, n, current * 2 + 1);
-//   printTreeArray(tree, n, current * 2 + 2);
-// }
+  cout << tr[currPos] << " ";
+  printTree(tr, n, currPos * 2 + 1);
+  printTree(tr, n, currPos * 2 + 2);
+}
 
 int main() {
-  int tr\[5] = { 1, 3, 2, 4, 5 };
-  // printTreeArray(treee, 5, 1);
+  int tr[5] = { 1, 3, 2, 4, 5 };
 
-  // tree<int> t;
-  // t.CreateWithArr(treee, 5);
+  printTree(tr, 5, 0);
 
-  // t.print();
-
+  tree<int> t;
+  t.CreateWithArr(tr, 5);
+  t.getRoot();
+  
   return 0;
 }
 
