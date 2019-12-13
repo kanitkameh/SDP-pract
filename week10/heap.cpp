@@ -55,18 +55,5 @@ int main() {
   insert_heap(heap, n, 1);
   insert_heap(heap, n, 33);
 
-  for(int i = 0; i < n; i++) {
-    cout << heap[i] << " ";
-  }
-  cout << endl;
-  delete_heap(heap, n, 33);
-  for(int i = 0; i < n; i++) {
-    cout << heap[i] << " ";
-  }
-  cout << endl;
-  heapsort(heap, n);
-  for(int i = 0; i < n; i++) {
-    cout << heap[i] << " ";
-  } 
   return 0;
 }
