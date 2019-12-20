@@ -15,4 +15,4 @@ exit
 Като пишете в криптирания файл направете двоичен запис на самото размешване Map<byte,byte> във файла преди съдържанието така че да може да се декриптират криптирани файлове и след като се изключи програмата като се прочете пермутацията.
 
 **Бележки**
-За криптирането използвайте [rand](http://www.cplusplus.com/reference/cstdlib/rand/) за да генерирате произволна подредба чрез алгоритъма на [Fisher-Yates](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
+За криптирането използвайте [rand()](http://www.cplusplus.com/reference/cstdlib/rand/) за да генерирате произволна подредба чрез алгоритъма на [Fisher-Yates](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
