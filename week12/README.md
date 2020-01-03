@@ -3,7 +3,7 @@
 За следващите задачи трябва да използвате **графи**.
 Има два начина за тяхното представяне:
 * [Матрица на съседство](https://en.m.wikipedia.org/wiki/Adjacency_matrix)
-  ![Adjacency matrix](https://media-geeksforgeeks-org.cdn.ampproject.org/ii/w1200/s/media.geeksforgeeks.org/wp-content/uploads/undirectedgraph.png)
+  ![Adjacency matrix](https://media.geeksforgeeks.org/wp-content/uploads/adjacencymatrix.png)
 * [Списък на съседите](https://www.geeksforgeeks.org/graph-and-its-representations/amp/)
   ![Adjacency list](https://media.geeksforgeeks.org/wp-content/uploads/listadjacency.png)
 ## BFS
